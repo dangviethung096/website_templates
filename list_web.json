@@ -1,0 +1,34 @@
+{
+    "webs": [
+        {
+            "name": "Clinic",
+            "url": "Clinic/index.html",
+            "image": "./img/clinic.png"
+        },
+        {
+            "name": "Carvilla",
+            "url": "Carvilla/index.html",
+            "image": "./img/carvilla.png"
+        },
+        {
+            "name": "Emailer",
+            "url": "Emailer/index.html",
+            "image": "./img/clinic.png"
+        },
+        {
+            "name": "Giftos",
+            "url": "Giftos/index.html",
+            "image": "./img/giftos.png"
+        },
+        {
+            "name": "Guarder",
+            "url": "Guarder/index.html",
+            "image": "./img/clinic.png"
+        },
+        {
+            "name": "Inance",
+            "url": "Inance/index.html",
+            "image": "./img/inance.png"
+        }
+    ]
+}
