@@ -1,6 +1,16 @@
 {
     "webs": [
         {
+            "name": "Preschool",
+            "url": "Preschool/index.html",
+            "image": "./img/kider.png"
+        },
+        {
+            "name": "Little Fashion",
+            "url": "LittleFashion/index.html",
+            "image": "./img/littlefashion.png"
+        },
+        {
             "name": "Clinic",
             "url": "Clinic/index.html",
             "image": "./img/clinic.png"
@@ -31,64 +41,54 @@
             "image": "./img/inance.png"
         },
         {
-            "name": "Little Fashion",
-            "url": "LittleFashion/index.html",
-            "image": "./img/littlefashion.png"
-        },
-        {
             "name": "List Race",
             "url": "ListRace/index.html",
-            "image": "./img/inance.png"
+            "image": "./img/listrace.png"
         },
         {
             "name": "Mediplus",
             "url": "Mediplus/index.html",
-            "image": "./img/inance.png"
+            "image": "./img/mediplus.png"
         },
         {
             "name": "Mico",
             "url": "Mico/index.html",
-            "image": "./img/inance.png"
+            "image": "./img/mico.png"
         },
         {
             "name": "Namari",
             "url": "Namari/index.html",
-            "image": "./img/inance.png"
+            "image": "./img/namari.png"
         },
         {
             "name": "Neo Gym",
             "url": "Neogym/index.html",
-            "image": "./img/inance.png"
+            "image": "./img/neogym.png"
         },
         {
             "name": "Oxer",
             "url": "Oxer/index.html",
-            "image": "./img/inance.png"
+            "image": "./img/oxer.png"
         },
         {
             "name": "Photosec",
             "url": "Photosec/index.html",
-            "image": "./img/inance.png"
-        },
-        {
-            "name": "Preschool",
-            "url": "Preschool/index.html",
-            "image": "./img/inance.png"
+            "image": "./img/photosec.png"
         },
         {
             "name": "Rent4u",
             "url": "Rent4u/index.html",
-            "image": "./img/inance.png"
+            "image": "./img/rent4u.png"
         },
         {
             "name": "Sbs",
             "url": "Sbs/index.html",
-            "image": "./img/inance.png"
+            "image": "./img/sbs.png"
         },
         {
             "name": "Troweld",
             "url": "Troweld/index.html",
-            "image": "./img/inance.png"
+            "image": "./img/troweld.png"
         }
     ]
 }
