@@ -13,7 +13,7 @@
         {
             "name": "Emailer",
             "url": "Emailer/index.html",
-            "image": "./img/clinic.png"
+            "image": "./img/emailer.png"
         },
         {
             "name": "Giftos",
@@ -23,11 +23,71 @@
         {
             "name": "Guarder",
             "url": "Guarder/index.html",
-            "image": "./img/clinic.png"
+            "image": "./img/guarder.png"
         },
         {
             "name": "Inance",
             "url": "Inance/index.html",
+            "image": "./img/inance.png"
+        },
+        {
+            "name": "Little Fashion",
+            "url": "LittleFashion/index.html",
+            "image": "./img/littlefashion.png"
+        },
+        {
+            "name": "List Race",
+            "url": "ListRace/index.html",
+            "image": "./img/inance.png"
+        },
+        {
+            "name": "Mediplus",
+            "url": "Mediplus/index.html",
+            "image": "./img/inance.png"
+        },
+        {
+            "name": "Mico",
+            "url": "Mico/index.html",
+            "image": "./img/inance.png"
+        },
+        {
+            "name": "Namari",
+            "url": "Namari/index.html",
+            "image": "./img/inance.png"
+        },
+        {
+            "name": "Neo Gym",
+            "url": "Neogym/index.html",
+            "image": "./img/inance.png"
+        },
+        {
+            "name": "Oxer",
+            "url": "Oxer/index.html",
+            "image": "./img/inance.png"
+        },
+        {
+            "name": "Photosec",
+            "url": "Photosec/index.html",
+            "image": "./img/inance.png"
+        },
+        {
+            "name": "Preschool",
+            "url": "Preschool/index.html",
+            "image": "./img/inance.png"
+        },
+        {
+            "name": "Rent4u",
+            "url": "Rent4u/index.html",
+            "image": "./img/inance.png"
+        },
+        {
+            "name": "Sbs",
+            "url": "Sbs/index.html",
+            "image": "./img/inance.png"
+        },
+        {
+            "name": "Troweld",
+            "url": "Troweld/index.html",
             "image": "./img/inance.png"
         }
     ]
