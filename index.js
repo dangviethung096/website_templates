@@ -1,21 +1,129 @@
 let webListData = [];
+
+let currentPage = 1;
+let totalPages = 5;
+const pageSize = 9;
 // Read json file
 fetch('/list_web.json')
     .then(response => response.json())
     .then(data => {
         // Assign weblist to data from file
         webListData = data.webs;
+        totalPages = Math.ceil(webListData.length / pageSize);
 
         // Create a div and insert to the body
-        var divArray = [];
-        for (var i = 0; i < data.webs.length; i++) {
-            if (i == 9) {
-                break;
+        updateTemplate(currentPage);
+
+        // Add pages size
+        let pagination = document.querySelector('ul.pagination');
+        for (let i = 1; i <= totalPages; i++) {
+            const li = document.createElement('li');
+            li.innerHTML = `${i}`;
+            li.classList.add('pagination-item');
+            li.value = i;
+            li.onclick = activePage;
+            if (i == 1) {
+                li.classList.add('active');
             }
-            let web = data.webs[i];
-            const div = document.createElement('div');
-            div.classList.add('col');
-            div.innerHTML = `
+            pagination.appendChild(li);
+            disablePreviousAndFirstBtn();
+        }
+
+        // Hide loader
+        let loader = document.querySelector('.container-loader');
+        loader.style.display = 'none';
+
+    });
+
+var pages = document.getElementsByClassName('pagination-item');
+let nextBtn = document.querySelector('.btn-next');
+let preBtn = document.querySelector('.btn-previous');
+let firstBtn = document.querySelector('.btn-first');
+let lastBtn = document.querySelector('.btn-last');
+
+const activePage = (event) => {
+    // Set current page when clicked on page
+    currentPage = event.target.value;
+    enableNextAndLastBtn();
+    enablePreviousAndFirstBtn();
+    if (currentPage == 1) {
+        disablePreviousAndFirstBtn();
+    } else if (currentPage == totalPages) {
+        disableNextAndLastBtn();
+    }
+
+    /* Apply 'active' class on active item */
+    addActive(event.target);
+
+    // Update template pages
+    updateTemplate(currentPage);
+};
+
+const removeActive = () => {
+    // Foreach page, remove 'active' class
+    for (let i = 0; i < pages.length; i++) {
+        pages[i].classList.remove('active');
+    }
+};
+
+const addActive = (element) => {
+    removeActive();
+    element.classList.add('active');
+};
+
+const first = () => {
+    currentPage = 1;
+    addActive(pages[currentPage - 1]);
+}
+
+const last = () => {
+    currentPage = totalPages;
+    addActive(pages[currentPage - 1]);
+}
+
+const previous = () => {
+    if (currentPage > 1) {
+        currentPage--;
+        addActive(pages[currentPage - 1]);
+    }
+}
+
+const next = () => {
+    if (currentPage < totalPages) {
+        currentPage++;
+        addActive(pages[currentPage - 1]);
+    }
+}
+
+const disableNextAndLastBtn = function () {
+    nextBtn.disabled = true;
+    lastBtn.disabled = true;
+}
+
+const disablePreviousAndFirstBtn = function () {
+    preBtn.disabled = true;
+    firstBtn.disabled = true;
+}
+
+const enableNextAndLastBtn = function () {
+    nextBtn.disabled = false;
+    lastBtn.disabled = false;
+}
+
+const enablePreviousAndFirstBtn = function () {
+    preBtn.disabled = false;
+    firstBtn.disabled = false;
+}
+
+
+
+function updateTemplate(pageIndex) {
+    let divArray = [];
+    for (var i = (pageIndex - 1) * pageSize; i < pageIndex * pageSize; i++) {
+        let web = webListData[i];
+        const div = document.createElement('div');
+        div.classList.add('col');
+        div.innerHTML = `
                 <div class="card">
                     <img src="${web.image}" class="card-img-top" alt="...">
                     <div class="card-body">
@@ -27,35 +135,15 @@ fetch('/list_web.json')
                         </a>
                     </div>
                 </div>`;
+        divArray.push(div);
+    }
 
-            divArray.push(div);
-        }
-
-        let webList = document.getElementById('website-list');
-        divArray.forEach(div => {
-            webList.appendChild(div);
-        });
-
-        // Hide loader
-        let loader = document.querySelector('.container-loader');
-        loader.style.display = 'none';
-
+    let webList = document.getElementById('website-list');
+    webList.innerHTML = '';
+    divArray.forEach(div => {
+        webList.appendChild(div);
     });
 
-let pages = document.getElementsByClassName('pagination-item');
-let nextBtn = document.getQuerySelector('.btn-next');
-let preBtn = document.getQuerySelector('.btn-previous');
-let firstBtn = document.getQuerySelector('.btn-first');
-let lastBtn = document.getQuerySelector('.btn-last');
-
-const activePage = (event) => {
-    // Set current page when clicked on page
-    currentPage = event.target.value;
-
-    /* Apply 'active' class on active item */
-    addActive(event.target);
-}
-
-const addActive = (element) => {
-    element.classList.add('active');
+    // Move to head of page
+    window.scrollTo(0, 0);
 }

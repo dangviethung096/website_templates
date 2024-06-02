@@ -23,25 +23,19 @@
             </div>
         </div>
         <div class="pagination-container">
-            <button class="btn btn-first">First</button>
-            <button class="btn btn-previous">
+            <button class="btn btn-first" onclick="first()">First</button>
+            <button class="btn btn-previous" onclick="previous()">
                 <i class="fa-solid fa-chevron-left"></i>
                 Previous
             </button>
 
-            <ul class="pagination">
-                <li class="pagination-item active" value="1" active>1</li>
-                <li class="pagination-item" value="2">2</li>
-                <li class="pagination-item" value="3">3</li>
-                <li class="pagination-item" value="4">4</li>
-                <li class="pagination-item" value="5">5</li>
-            </ul>
+            <ul class="pagination"></ul>
 
-            <button class="btn btn-next">
+            <button class="btn btn-next" onclick="next()">
                 Next
                 <i class="fa-solid fa-chevron-right"></i>
             </button>
-            <button class="btn btn-last">Last</button>
+            <button class="btn btn-last" onclick="last()">Last</button>
         </div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
