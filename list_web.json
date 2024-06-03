@@ -3,92 +3,92 @@
         {
             "name": "Preschool",
             "url": "Preschool/index.html",
-            "image": "./img/kider.png"
+            "image": "./img/kider.jpg"
         },
         {
             "name": "Little Fashion",
             "url": "LittleFashion/index.html",
-            "image": "./img/littlefashion.png"
+            "image": "./img/littlefashion.jpg"
         },
         {
             "name": "Clinic",
             "url": "Clinic/index.html",
-            "image": "./img/clinic.png"
+            "image": "./img/clinic.jpg"
         },
         {
             "name": "Carvilla",
             "url": "Carvilla/index.html",
-            "image": "./img/carvilla.png"
+            "image": "./img/carvilla.jpg"
         },
         {
             "name": "Emailer",
             "url": "Emailer/index.html",
-            "image": "./img/emailer.png"
+            "image": "./img/emailer.jpg"
         },
         {
             "name": "Giftos",
             "url": "Giftos/index.html",
-            "image": "./img/giftos.png"
+            "image": "./img/giftos.jpg"
         },
         {
             "name": "Guarder",
             "url": "Guarder/index.html",
-            "image": "./img/guarder.png"
+            "image": "./img/guarder.jpg"
         },
         {
             "name": "Inance",
             "url": "Inance/index.html",
-            "image": "./img/inance.png"
+            "image": "./img/inance.jpg"
         },
         {
             "name": "List Race",
             "url": "ListRace/index.html",
-            "image": "./img/listrace.png"
+            "image": "./img/listrace.jpg"
         },
         {
             "name": "Mediplus",
             "url": "Mediplus/index.html",
-            "image": "./img/mediplus.png"
+            "image": "./img/mediplus.jpg"
         },
         {
             "name": "Mico",
             "url": "Mico/index.html",
-            "image": "./img/mico.png"
+            "image": "./img/mico.jpg"
         },
         {
             "name": "Namari",
             "url": "Namari/index.html",
-            "image": "./img/namari.png"
+            "image": "./img/namari.jpg"
         },
         {
             "name": "Neo Gym",
             "url": "Neogym/index.html",
-            "image": "./img/neogym.png"
+            "image": "./img/neogym.jpg"
         },
         {
             "name": "Oxer",
             "url": "Oxer/index.html",
-            "image": "./img/oxer.png"
+            "image": "./img/oxer.jpg"
         },
         {
             "name": "Photosec",
             "url": "Photosec/index.html",
-            "image": "./img/photosec.png"
+            "image": "./img/photosec.jpg"
         },
         {
             "name": "Rent4u",
             "url": "Rent4u/index.html",
-            "image": "./img/rent4u.png"
+            "image": "./img/rent4u.jpg"
         },
         {
             "name": "Sbs",
             "url": "Sbs/index.html",
-            "image": "./img/sbs.png"
+            "image": "./img/sbs.jpg"
         },
         {
             "name": "Troweld",
             "url": "Troweld/index.html",
-            "image": "./img/troweld.png"
+            "image": "./img/troweld.jpg"
         }
     ]
 }
