@@ -4,7 +4,7 @@ let currentPage = 1;
 let totalPages = 5;
 const pageSize = 9;
 // Read json file
-fetch('/list_web.json')
+fetch('./list_web.json')
     .then(response => response.json())
     .then(data => {
         // Assign weblist to data from file
