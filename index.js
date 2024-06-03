@@ -36,14 +36,22 @@ fetch('/list_web.json')
     });
 
 var pages = document.getElementsByClassName('pagination-item');
-let nextBtn = document.querySelector('.btn-next');
-let preBtn = document.querySelector('.btn-previous');
-let firstBtn = document.querySelector('.btn-first');
-let lastBtn = document.querySelector('.btn-last');
+let nextBtn = document.querySelector('.paging-btn-next');
+let preBtn = document.querySelector('.paging-btn-previous');
+let firstBtn = document.querySelector('.paging-btn-first');
+let lastBtn = document.querySelector('.paging-btn-last');
 
 const activePage = (event) => {
     // Set current page when clicked on page
     currentPage = event.target.value;
+
+    /* Apply 'active' class on active item */
+    addActive(event.target);
+
+    updateUI();
+};
+
+function updateUI() {
     enableNextAndLastBtn();
     enablePreviousAndFirstBtn();
     if (currentPage == 1) {
@@ -52,12 +60,9 @@ const activePage = (event) => {
         disableNextAndLastBtn();
     }
 
-    /* Apply 'active' class on active item */
-    addActive(event.target);
-
     // Update template pages
     updateTemplate(currentPage);
-};
+}
 
 const removeActive = () => {
     // Foreach page, remove 'active' class
@@ -74,17 +79,20 @@ const addActive = (element) => {
 const first = () => {
     currentPage = 1;
     addActive(pages[currentPage - 1]);
+    updateUI();
 }
 
 const last = () => {
     currentPage = totalPages;
     addActive(pages[currentPage - 1]);
+    updateUI();
 }
 
 const previous = () => {
     if (currentPage > 1) {
         currentPage--;
         addActive(pages[currentPage - 1]);
+        updateUI();
     }
 }
 
@@ -92,6 +100,7 @@ const next = () => {
     if (currentPage < totalPages) {
         currentPage++;
         addActive(pages[currentPage - 1]);
+        updateUI();
     }
 }
 
@@ -131,7 +140,7 @@ function updateTemplate(pageIndex) {
                     </div>
                     <div class="mb-5 d-flex justify-content-around">
                         <a href="${web.url}">
-                            <button class="btn btn-primary">Xem</button>
+                            <button type="button" class="btn btn-primary">Xem</button>
                         </a>
                     </div>
                 </div>`;

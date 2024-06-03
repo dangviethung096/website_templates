@@ -6,6 +6,7 @@
     --secondary-color: #afb4ff;
     --white-color: #fff;
     --grey-color: #rgba(128, 128, 128, 0.5);
+    --button-color: #005BE4;
 
     /* font */
     --font-size: 1rem;
@@ -115,7 +116,7 @@ h5 {
     padding: 1rem;
 }
 
-.btn {
+.paging-btn {
     display: flex;
     align-items: center;
     font-size: var(--font-size);
@@ -129,21 +130,21 @@ h5 {
     transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-.btn-previous i {
+.paging-btn-previous i {
     margin-right: 0.4rem;
 }
 
-.btn-next i {
+.paging-btn-next i {
     margin-left: 0.4rem;
 }
 
 
-.btn:hover {
+.paging-btn:hover {
     color: var(--white-color);
     background-color: var(--primary-color);
 }
 
-.btn:disabled:hover {
+.paging-btn:disabled:hover {
     cursor: not-allowed;
     color: var(--grey-color);
     background-color: unset;
@@ -171,7 +172,7 @@ ul.pagination {
 
 .pagination-item.active {
     color: var(--white-color);
-    background-image: linear-gradient(var(--primary-color), var(--primary-color));
+    background-image: linear-gradient(var(--button-color), var(--button-color));
     background-repeat: no-repeat;
     background-position: 0 0;
     cursor: default;
