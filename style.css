@@ -150,6 +150,7 @@ h5 {
     background-color: unset;
 }
 
+
 ul.pagination {
     margin-bottom: 0 !important;
     padding-left: 0 !important;
@@ -181,4 +182,20 @@ ul.pagination {
 .pagination-item:hover {
     color: var(--white-color);
     background-color: var(--secondary-color);
+}
+
+/* media screen with width 786px */
+@media screen and (max-width: 786px) {
+    .paging-btn-first {
+        display: none;
+    }
+
+    .paging-btn-last {
+        display: none;
+    }
+
+    /* select pagination-btn class not active */
+    .pagination-item:not(.active) {
+        display: none;
+    }
 }

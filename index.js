@@ -31,8 +31,9 @@ fetch('./list_web.json')
 
         // Hide loader
         let loader = document.querySelector('.container-loader');
-        loader.style.display = 'none';
-
+        if (loader) {
+            loader.style.display = 'none';
+        }
     });
 
 var pages = document.getElementsByClassName('pagination-item');
